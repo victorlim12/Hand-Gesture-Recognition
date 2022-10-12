@@ -6,12 +6,14 @@ import './App.css';
 import {Route, Link} from "react-router-dom"
 
 import Tar from './Pages/resultpage';
+import Tar1 from './Pages/extrapage';
 import Finalpage from './Pages/finalpage';
 
 function App() {
   return (
     <div>
-        <Tar/>
+        
+       <Tar1></Tar1>
 
         </div>
   );

@@ -1,12 +1,14 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
+import { Button, Box} from "@mui/material";
 import { color } from "@mui/system";
 import './Tar.css'
 import Link from '@mui/material/Link';
 
+
 function Copyright(props) {
     return (
+      
       <Typography variant="body2" color="text.secondary" align="left" {...props}>
         {'Copyright © '}
         <Link color="inherit" href="https://mui.com/">
@@ -18,42 +20,51 @@ function Copyright(props) {
     );
   }
 
-export default function Tar(){
+export default function Tar1(){
     return(
+      
         <div>
-  
+          
+          <Box sx={{
+        marginTop: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}>
             <Typography variant="h4" color="text.secondary" align="center">
             Congratulations! Your personal report has been generated.
           </Typography>
 
             
-            <p className="test">You did a good job in these gestures!</p>
+            <p>You did a good job in these gestures!</p>
 
-            <p className="test6">Level 1</p>
+            <p>Level 1</p>
 
-            <p className="test7">Level 2</p>
+            <p>Level 2</p>
 
-            <p className="test8">Level 3</p>
+            <p>Level 3</p>
 
-            <p className="test9">Level 1</p>
+            <p>Level 1</p>
 
-            <p className="test10">Level 2</p>
+            <p>Level 2</p>
 
-            <p className="test11">Level 3</p>
+            <p>Level 3</p>
 
-            <p className="test2">You were unsuccessful in these gestures!</p>
+
+            <br></br>
 
             
 
-            <Button className="test3" variant="contained">Give your feedback</Button>
-            <Button className="test4" variant="contained">Redo the unsuccessful gestures</Button>
+            <Button  variant="contained">Give your feedback</Button>
+            <br></br>
+            <Button  variant="contained">Redo the unsuccessful gestures</Button>
 
   
 
             
-            <Copyright className="test5" sx={{ mt: 8, mb: 4 }} />
+            <Copyright  sx={{ mt: 8, mb: 4 }} />
 
-
+            </Box>
         </div>
     )
 }
