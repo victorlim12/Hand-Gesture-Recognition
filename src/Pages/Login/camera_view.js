@@ -1,19 +1,12 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Margin, Stream } from '@mui/icons-material';
-import thrumb_up from './thrumb_up.jpeg'; 
+//import thrumb_up from './thrumb_up.jpeg'; 
 import {useRef, useEffect, useState} from 'react';
 
 function Copyright(props) {
@@ -57,25 +50,7 @@ function App(){
     <div className='App'>
       <div className='camera'>
         <video ref={videoRef}></video>
-        <Button
-                type="submit"
-                halfWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Next gesture 
-              </Button>
-        <Box>
-                
-        </Box>
-        <Button
-                type="submit"
-                halfWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                Restart this gesture
-              </Button>
+      
       </div>
       
     </div>
@@ -90,6 +65,15 @@ export default function Level() {
     const data = new FormData(event.currentTarget);
     
   };
+  
+  const [count,setCount] = useState(0)
+    function updateCount(){
+      setCount(count+1)
+    }
+  const gestureDesc = ['how to do this gesture. The thumbs-up emoji is used to express assent, approval, or encouragement in digital communications, especially in Western cultures.','HAHA','third gesture']
+  const gestureImg = ['https://picsum.photos/id/10/200/300','https://picsum.photos/id/1008/200/300','https://picsum.photos/id/1/200/300']
+
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -117,10 +101,10 @@ export default function Level() {
               Thumb up
             </Typography>
             <Typography component="h3" variant="h5" >
-            how to do this gesture. The thumbs-up emoji is used to express assent, approval, or encouragement in digital communications, especially in Western cultures.
+              {gestureDesc[count]}
             </Typography>
             
-            <img src={thrumb_up} alt="thrumb_up" width={250} height={250}  />
+            <img src={gestureImg[count]} alt="" width={250} height={250}  />
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
               
               <Button
@@ -129,7 +113,7 @@ export default function Level() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Gesture practice: 2/5
+                Gesture practice: {count+1}/5
               </Button>
               
               
@@ -160,6 +144,26 @@ export default function Level() {
                 width: '50%'
                   }}>
               <App/>
+              <Button
+                onClick={updateCount}
+                type="submit"
+                halfWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Next gesture 
+              </Button>
+        <Box>
+                
+        </Box>
+        <Button
+                type="submit"
+                halfWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Restart this gesture
+              </Button>
                 
             </Box>
           </Box>
