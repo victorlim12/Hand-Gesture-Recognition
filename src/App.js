@@ -6,7 +6,13 @@ import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import Homepage from'./Homepage';
 import About from'./About';
 import Feedback from './Feedback';
+<<<<<<< HEAD
 import Test2 from './Ourteam';
+=======
+import Login from './Pages/Login/Loginpage';
+import { AodOutlined } from '@mui/icons-material';
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
+>>>>>>> origin
 
 function App(){
     return (
@@ -23,7 +29,7 @@ function App(){
       </BrowserRouter>
 
     </div>
-    );
+      );
 }
 
 export default App;
