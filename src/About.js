@@ -46,6 +46,7 @@ const About=()=>{
                 halfWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                href="/pages/login/camera_view"
               >
                 Start the game 
               </Button>

@@ -37,13 +37,21 @@ export default function Login() {
       password: data.get('password'),
     });
   };
+  function onConfirmButtonClick() {
+    const input = document.getElementById('usernameInput');
+
+    setUsername(input.value);
+    location.href = '/chooseIndustry';
+  }
+
+  function setUsername(username) {
+    localStorage.setItem('username', username);
+  }
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="lg">
-        /*<h1  style={{ backgroundColor: '#cfe8fc'}}>
-          Container Of maxWidth = lg 
-        </h1>*/
+      <Container component="main" maxWidth="sm">
+        
         <CssBaseline />
         <Box
           sx={{
@@ -55,18 +63,16 @@ export default function Login() {
         >
           
           <Typography component="h1" variant="h5">
-            Sign out
+            Log in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
+              label="Username"
+              name="username"
+              
             />
             <TextField
               margin="normal"
