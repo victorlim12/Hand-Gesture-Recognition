@@ -1,23 +1,26 @@
-import SignIn from './Pages/Login/Loginpage';
-import React from 'react';
-import test3 from './Pages/resultpage';
-import { Typography } from '@mui/material';
 import './App.css';
-import {Route, Link} from "react-router-dom"
+import React from 'react';
+import Header from './Header';
+import { BrowserRouter,Routes, Route } from 'react-router-dom'
+import Homepage from'./Homepage';
+import About from'./About';
+import Feedback from './Feedback';
+import Login from './Pages/Login/Loginpage';
 
-import Tar from './Pages/resultpage';
-import Tar1 from './Pages/extrapage';
-import Finalpage from './Pages/finalpage';
-
-function App() {
-  return (
-    <div>
-        
-       <Tar1></Tar1>
-
-        </div>
-  );
+function App(){
+    return (
+    <div className="App">
+        <BrowserRouter >
+      <Header/>
+      <Routes>
+        <Route path="/homepage" element={<Homepage />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/login" element={<h1>Login</h1>}/>
+        <Route path="/Feedback" element={<Feedback />}/>
+      </Routes>
+      </BrowserRouter>
+    </div>
+      );
 }
 
 export default App;
-
