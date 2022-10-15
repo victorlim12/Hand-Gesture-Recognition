@@ -34,7 +34,7 @@ export default function Homepage() {
                 flexDirection: 'column',
                 
             }}>
-                <Typography component="h4" variant="h5" sx={{fontWeight: 800}}>
+                <Typography component="h4" variant="h5" sx={{fontWeight: 300}}>
                   We provide assistance and ease to neurological patients with disabled hands
                 </Typography>
             </Box>
