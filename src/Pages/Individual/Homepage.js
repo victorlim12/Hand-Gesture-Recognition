@@ -1,37 +1,28 @@
 import React from "react";
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CenterFocusStrong, Margin, Stream } from '@mui/icons-material';
 
-const Homepage=()=>{
+import '../Style/color.css'
+
+export default function Homepage() {
+    const test= "Child"
     return(
-        <Container  component="main" maxWidth="md">
+        <Container component="main" maxWidth="md" sx={{height: '100vh'}}>
             <Box
             sx={{
-                width:'100%',
-                marginTop: 15,
+                width:'100vh',
+                marginTop: '15%',
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
-                
             }}>
         
                 <div className="homepage">
-                    <Typography component="h1" variant="h8" >
-                        Welcome
+                    <Typography component="h1" variant="h1" sx={{fontWeight: 500}} >
+                        Welcome, <span className='blue'>{test}</span>
                      </Typography>
-                     
                 </div>
             </Box>
             <Box
@@ -43,22 +34,22 @@ const Homepage=()=>{
                 flexDirection: 'column',
                 
             }}>
-                <Typography component="h4" variant="h6" >
+                <Typography component="h4" variant="h5" sx={{fontWeight: 800}}>
                   We provide assistance and ease to neurological patients with disabled hands
                 </Typography>
             </Box>
             <Box sx={{
                 width:'100%',
-                marginTop: 15,
+                marginTop: '5%',
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
             }}>
-              <Button variant="contained" Start sx={{display:'flex'}}>
+              <Button variant="contained" size='large' 
+              sx={{display:'flex', minWidth:'10rem', minHeight:'3rem', borderRadius: '25px'}}>
                   start
                </Button>
             </Box>
         </Container>
     )
 }
-export default Homepage

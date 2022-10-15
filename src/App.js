@@ -1,11 +1,13 @@
 import './App.css';
 import React from 'react';
-import Header from './Header';
+import Header from './Pages/Individual/Header';
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
-import Homepage from'./Homepage';
-import About from'./About';
-import Feedback from './Feedback';
-import Login from './Pages/Login/Loginpage';
+import Homepage from'./Pages/Individual/Homepage';
+import About from'./Pages/Individual/About';
+import Feedback from './Pages/Individual/Feedback';
+import Login from './Pages/Individual/Loginpage';
+import Level from './Pages/Training-page/camera_view';
+import './Pages/Style/color.css'
 
 function App(){
     return (
@@ -13,7 +15,7 @@ function App(){
         <BrowserRouter >
       <Header/>
       <Routes>
-        <Route path="/homepage" element={<Homepage />}/>
+        <Route path="/homepage" element={<Homepage />} className="Page1"/>
         <Route path="/about" element={<About />}/>
         <Route path="/login" element={<h1>Login</h1>}/>
         <Route path="/Feedback" element={<Feedback />}/>
