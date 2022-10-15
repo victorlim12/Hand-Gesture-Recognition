@@ -7,14 +7,12 @@ import Webcam from "react-webcam";
 
 
 export default function Webcams(){
-  // let cv = require('opencv.js');
     const socket = io("localhost:5001/", {
         transports: ["websocket"],
         cors: {
             origin: "http://localhost:3000/",
             }})
 
-    const [data, setData]= useState("")
     const videoRef = useRef()
     const photoRef = useRef()
     const canvasRef =useRef()
@@ -129,13 +127,12 @@ hidden
             height: 240,
           }}
         />{" "}
-                <p>{data}</p>
-                <canvas ref={photoRef} id="canvas"></canvas>
+                <canvas hidden ref={photoRef} id="canvas"></canvas>
                 <canvas ref={canvasRef} id="canvas"></canvas>
-                <div class = 'video'>
-    <img id="image"/>
-</div>
-                </div>
+                {/* <div class = 'video'>
+                 <img id="image"/>
+        </div> */}
+        </div>
 
     )
 

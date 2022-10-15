@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 //import thrumb_up from './thrumb_up.jpeg'; 
 import {useRef, useEffect, useState} from 'react';
+import Webcams from '../../Components/Webcam';
 
 function Copyright(props) {
   return (
@@ -28,34 +29,6 @@ function App(){
   const videoRef = useRef(null);
   const photoRef = useRef(null);
   const [hasPhoto, setHasPhoto]= useState(false);
-
-  const getVideo=()=>{
-    navigator.mediaDevices
-      .getUserMedia({
-        video:{width:450, height:400}
-      })
-      .then(Stream=>{
-        let video=videoRef.current;
-        video.srcObject=Stream;
-        video.play();
-      })
-      .catch(err=>{
-        console.error(err);
-      })
-  }
-  useEffect(()=>{
-    getVideo();
-  },[videoRef]);
-  return(
-    <div className='App'>
-      <div className='camera'>
-        <video ref={videoRef}></video>
-      
-      </div>
-      
-    </div>
-  )
-  
 
 }
 
@@ -143,6 +116,7 @@ export default function Level() {
                 flexDirection: 'column',
                 width: '50%'
                   }}>
+                  <Webcams/>
               <App/>
               <Button
                 onClick={updateCount}
