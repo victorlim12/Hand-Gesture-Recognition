@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import '../Style/color.css'
+import '../../Style/color.css'
 
 export default function Homepage() {
     const test= "Child"

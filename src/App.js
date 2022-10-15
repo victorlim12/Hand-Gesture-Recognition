@@ -7,7 +7,7 @@ import About from'./Pages/Individual/About';
 import Feedback from './Pages/Individual/Feedback';
 import Login from './Pages/Individual/Loginpage';
 import Level from './Pages/Training-page/camera_view';
-import './Pages/Style/color.css'
+import './Style/color.css'
 
 function App(){
     return (
