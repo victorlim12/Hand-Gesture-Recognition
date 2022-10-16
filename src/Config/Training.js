@@ -1,0 +1,1 @@
+export const Handconf=["like", "peace", "fist", "palm","peace inverted", "mute"]

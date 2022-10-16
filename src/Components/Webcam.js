@@ -4,10 +4,11 @@ import {Hands, HAND_CONNECTIONS} from "@mediapipe/hands";
 import * as cam from "@mediapipe/camera_utils";
 import * as mediapipeUtils from '@mediapipe/drawing_utils';
 import Webcam from "react-webcam";
+
 import { AppContext } from "../Config/Provider";
+import { Handconf } from "../Config/Training";
 
-
-export default function Webcams(){
+export default function Webcams(props){
     const [done, setDone] = useContext(AppContext)
 
     function updateDone(){
@@ -24,12 +25,14 @@ export default function Webcams(){
     const canvasRef =useRef()
     let tracker =0
     var camera = null;
+    let i =0
 
     //for classification
     //set motion to be classified
 
     function classifier(image){
-        if (image==='like'){
+      console.log('classifying'+ Handconf[i])
+        if (image===Handconf[i]){
             // console.log('true')
             tracker +=1
             // console.log(tracker)
@@ -89,9 +92,10 @@ export default function Webcams(){
     useEffect(() => {
     socket.on('response_back', function(image){
       classifier(image)
-    //   console.log(tracker)
+
       if (tracker===12){
         tracker=0
+        i=i+1
         updateDone()
     }
   });

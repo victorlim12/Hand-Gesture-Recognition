@@ -6,12 +6,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-//import thrumb_up from './thrumb_up.jpeg'; 
 import {useRef, useEffect, useState, useContext} from 'react';
-import { io } from "socket.io-client";
+
 import Webcams from '../../Components/Webcam';
 import { AppContext } from '../../Config/Provider';
-
+import { Handconf } from '../../Config/Training';
 
 
 function Copyright(props) {
@@ -28,14 +27,10 @@ function Copyright(props) {
 }
 
 const theme = createTheme();
-const socket = io("localhost:5001/", {
-  transports: ["websocket"],
-  cors: {
-      origin: "http://localhost:3000/",
-      }})
 
 export default function Level() {
   let [done, setDone] = useContext(AppContext)
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -70,7 +65,7 @@ export default function Level() {
               Gesture information
             </Typography>
             <Typography component="h2" variant="h8">
-              Thumbs up {done}
+              {Handconf[done]} {done}
             </Typography>
             <img src={gestureImg[count]} alt="" width={250} height={250}  />
             <Typography component="p" variant="h6" >
@@ -103,7 +98,9 @@ export default function Level() {
                 width: '50%',
                   }}>
               <Typography component="h1" variant="h3" mb={'5%'} > Camera view</Typography>
-                  <Webcams/>
+                  <Webcams 
+                  gesture= {Handconf[done]}
+                  />
               <Button
                 onClick={updateCount}
                 type="submit"
