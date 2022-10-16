@@ -1,12 +1,18 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, useContext} from "react"
 import { io } from "socket.io-client";
 import {Hands, HAND_CONNECTIONS} from "@mediapipe/hands";
 import * as cam from "@mediapipe/camera_utils";
 import * as mediapipeUtils from '@mediapipe/drawing_utils';
 import Webcam from "react-webcam";
+import { AppContext } from "../Config/Provider";
 
 
 export default function Webcams(){
+    const [done, setDone] = useContext(AppContext)
+
+    function updateDone(){
+        setDone(currDone => currDone + 1)
+      }
     const socket = io("localhost:5001/", {
         transports: ["websocket"],
         cors: {
@@ -16,15 +22,27 @@ export default function Webcams(){
     const videoRef = useRef()
     const photoRef = useRef()
     const canvasRef =useRef()
+    let tracker =0
     var camera = null;
+
+    //for classification
+    //set motion to be classified
+
+    function classifier(image){
+        if (image==='like'){
+            // console.log('true')
+            tracker +=1
+            // console.log(tracker)
+        }
+    }
 
   function paintToCanvas (photos) {
     let video = videoRef.current;
     let photo = photoRef.current;
     let ctx = photo.getContext("2d");
 
-    const width = 320;
-    const height = 240;
+    const width = 400;
+    const height = 300;
     photo.width = width;
     photo.height = height;
 
@@ -70,9 +88,12 @@ export default function Webcams(){
 
     useEffect(() => {
     socket.on('response_back', function(image){
-      const image_id = document.getElementById('image');
-      console.log(image_id)
-      image_id.src = image;
+      classifier(image)
+    //   console.log(tracker)
+      if (tracker===12){
+        tracker=0
+        updateDone()
+    }
   });
 
     const hands = new Hands({
@@ -100,8 +121,8 @@ export default function Webcams(){
         onFrame: async () => {
           await hands.send({ image: videoRef.current.video });
         },
-        width: 320,
-        height: 240,
+        width: 400,
+        height: 300,
       });
       camera.start();
       paintToCanvas({ image: videoRef.current.video })
@@ -129,9 +150,9 @@ hidden
         />{" "}
                 <canvas hidden ref={photoRef} id="canvas"></canvas>
                 <canvas ref={canvasRef} id="canvas"></canvas>
-                {/* <div class = 'video'>
+                <div class = 'video'>
                  <img id="image"/>
-        </div> */}
+        </div>
         </div>
 
     )

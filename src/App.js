@@ -1,6 +1,8 @@
 import './App.css';
 import React from 'react';
 import Header from './Pages/Individual/Header';
+import { AppProvider } from './Config/Provider';
+
 import { BrowserRouter,Routes, Route } from 'react-router-dom'
 import Homepage from'./Pages/Individual/Homepage';
 import About from'./Pages/Individual/About';
@@ -9,9 +11,12 @@ import Login from './Pages/Individual/Loginpage';
 import Level from './Pages/Training-page/camera_view';
 import './Style/color.css'
 
+
 function App(){
+
     return (
     <div className="App">
+      <AppProvider>
         <BrowserRouter >
       <Header/>
       <Routes>
@@ -21,6 +26,7 @@ function App(){
         <Route path="/Feedback" element={<Feedback />}/>
       </Routes>
       </BrowserRouter>
+      </AppProvider>
     </div>
       );
 }
