@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Header=()=>{
     return(
-        <div>
+        <div sx={{
+            textAlign:'Right'
+        }}>
             <ul className="header-ul">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
