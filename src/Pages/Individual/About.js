@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 const About=()=>{
     return(
-        <Container  component="main" maxWidth="md">
+        <Container component="main" maxWidth="md">
             <Box
             sx={{
                 width:"100%",
@@ -21,7 +21,7 @@ const About=()=>{
                         About this Game
                      </Typography>
                      <Button
-                 variant="contained" size='large' 
+                 variant="contained" size='large' href='/Training'
                  sx={{display:'flex', minWidth:'10rem', minHeight:'3rem', borderRadius: '25px', mb: '2%'}}
               >
                 Ready to Practice ? 

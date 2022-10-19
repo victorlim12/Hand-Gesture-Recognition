@@ -20,10 +20,11 @@ function App(){
         <BrowserRouter >
       <Header/>
       <Routes>
-        <Route path="/" element={<Level />} className="Page1"/>
+        <Route path="/" element={<Homepage />} className="Page1"/>
         <Route path="/about" element={<About />}/>
         <Route path="/login" element={<h1>Login</h1>}/>
         <Route path="/Feedback" element={<Feedback />}/>
+        <Route path='/Training' element={<Level/>}/>
       </Routes>
       </BrowserRouter>
       </AppProvider>

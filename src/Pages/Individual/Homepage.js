@@ -45,7 +45,7 @@ export default function Homepage() {
                 alignItems: 'center',
                 flexDirection: 'column',
             }}>
-              <Button variant="contained" size='large' 
+              <Button variant="contained" size='large' href="/about"
               sx={{display:'flex', minWidth:'10rem', minHeight:'3rem', borderRadius: '25px'}}>
                   start
                </Button>

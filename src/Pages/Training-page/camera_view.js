@@ -114,7 +114,6 @@ export default function Level() {
         </Box>
         <Button
                 type="submit"
-                halfWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
