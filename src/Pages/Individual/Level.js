@@ -9,6 +9,7 @@ import {CardMedia} from '@mui/material';
 import {Button} from '@mui/material';
 import {Container} from '@mui/material';
 import {Box} from '@mui/material';
+import { minHeight } from '@mui/system';
 
 // const useStyles = makeStyles({
 //   root: {
@@ -22,7 +23,7 @@ export default function Level() {
   return (
     <Container  component="main" maxWidth="md">
                     <Typography component="h1" variant="h8" sx={{
-                        marginTop: 5, 
+                        marginTop: 10, 
                         textAlign:"center"}} >
                         Choose your Category
                      </Typography>
@@ -31,7 +32,7 @@ export default function Level() {
             sx={{
                 width:'100%',
                 marginTop: 9,
-                marginLeft:10,
+                marginLeft:17,
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'row',
@@ -39,13 +40,14 @@ export default function Level() {
             }}>
                 <Box>
                     <Card sx={{
-                        minWidth: 200}} >
+                        minWidth: 200
+                        }} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         alt="Contemplative Reptile"
-                        height="140"
-                        image="/static/images/cards/contemplative-reptile.jpg"
+                        height="200"
+                        image="https://media.istockphoto.com/photos/hand-picture-id173648736?k=20&m=173648736&s=612x612&w=0&h=77BBXyunFP3cppRUOO1ydrjdaDzwk8AqErCyz5f_s2A="
                         title="Contemplative Reptile"
                         />
                         <CardContent>
@@ -53,21 +55,21 @@ export default function Level() {
                             textAlign:"center"
                         }}>
                             Palm
-                        </Typography>
+                            </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>
                 </Box>
              <Box>
                     <Card sx={{
-                        marginLeft: 6,
-                        minWidth: 200}} >
+                        marginLeft: 15,
+                        maxWidth: 250}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         alt="Contemplative Reptile"
-                        height="140"
-                        image="/static/images/cards/contemplative-reptile.jpg"
+                        height="200"
+                        image="https://media.istockphoto.com/photos/elegant-female-hand-on-a-white-background-in-isolation-picture-id467128804?k=20&m=467128804&s=612x612&w=0&h=lqh3W4xwvL7JbYek6xHppdmWena5FTYPhX_Emy9ntts="
                         title="Contemplative Reptile"
                         />
                         <CardContent>
@@ -80,31 +82,8 @@ export default function Level() {
                     </CardActionArea>
                     </Card>
                 </Box>
-            <Box>
-                    <Card sx={{
-                        marginLeft: 6,
-                        minWidth: 200}} >
-                    <CardActionArea  href="/about">
-                        <CardMedia
-                        component="img"
-                        alt="Contemplative Reptile"
-                        height="140"
-                        image="/static/images/cards/contemplative-reptile.jpg"
-                        title="Contemplative Reptile"
-                        />
-                        <CardContent>
-                        <Typography gutterBottom variant="h5" component="h2" sx={{
-                            textAlign:"center"
-                        }}>
-                        Arm
-                        </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    </Card>
-                </Box>
              </Box>
             
         </Container>
   );
 }
-

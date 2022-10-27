@@ -78,7 +78,8 @@ const About=()=>{
                 type="submit"
                 halfWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                
+                sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
                 href="/level"
               >
                 Start the game 
@@ -88,7 +89,7 @@ const About=()=>{
                 type="submit"
                 halfWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
                 href="/Ourteam"
               >
                 Know more about our team

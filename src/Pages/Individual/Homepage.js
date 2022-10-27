@@ -60,9 +60,10 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 const Homepage=()=>{
+    const username = localStorage.getItem('username')
     return(
-        <Container  component="main" maxWidth="md">
-            <Box
+        <Container  component="main" >
+            <Box maxWidth="xlg"
             sx={{
                 width:'100%',
                 marginTop: 15,
@@ -70,22 +71,25 @@ const Homepage=()=>{
                 alignItems: 'center',
                 flexDirection: 'column',
                 
+            
+                
             }}>
         
                 <div className="homepage">
-                    <Typography component="h1" variant="h8" >
-                        Welcome
+                    <Typography component="h1" variant="h3" >
+                        Welcome  <span className='blue'>{username}</span>!
                      </Typography>
                      
                 </div>
             </Box>
-            <Box
+            <Box maxWidth="lg"
             sx={{
                 width:'100%',
                 marginTop: 5,
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
+               
                 
             }}>
                 <Typography component="h4" variant="h6" >
@@ -93,15 +97,22 @@ const Homepage=()=>{
                 </Typography>
             </Box>
             <Box sx={{
-                width:'100%',
+                
                 marginTop: 15,
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
                 
+             
+                
             }}>
-              <Button variant="contained" Start sx={{display:'flex'}}
+                
+              <Button variant="contained" sx={{display:'flex', minWidth:'6rem', minHeight:'2rem', mt: 3, mb: 2 , borderRadius: '25px'}}
                 href="/login">
+                  log in
+               </Button>
+               <Button variant="contained" sx={{mt: 2, mb: 2,  borderRadius: '25px'}}
+                href="/about">
                   start
                </Button>
             </Box>
