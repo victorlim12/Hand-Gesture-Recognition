@@ -12,6 +12,7 @@ import Level from './Pages/Training-page/camera_view';
 import './Style/color.css';
 import Ourteam from './Pages/Individual/Ourteam';
 import Category from './Pages/Individual/Level';
+import UnityGame from './Pages/Individual/Unity';
 
 
 function App(){
@@ -30,6 +31,7 @@ function App(){
         <Route path="/Ourteam" element={<Ourteam />}/>
         <Route path="/Level" element={<Category />}/>
         <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/Unity" element={<UnityGame />} />
       </Routes>
       </BrowserRouter>
       </AppProvider>

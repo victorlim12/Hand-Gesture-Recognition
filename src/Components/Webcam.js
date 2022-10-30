@@ -3,17 +3,29 @@ import { io } from "socket.io-client";
 import {Hands, HAND_CONNECTIONS} from "@mediapipe/hands";
 import * as cam from "@mediapipe/camera_utils";
 import * as mediapipeUtils from '@mediapipe/drawing_utils';
+
 import Webcam from "react-webcam";
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
 
 import { AppContext } from "../Config/Provider";
 import { Handconf } from "../Config/Training";
 
 export default function Webcams(props){
     const [done, setDone] = useContext(AppContext)
+    let [progress, setProgress] = useState ()
 
     function updateDone(){
         setDone(currDone => currDone + 1)
       }
+
+    function updateProgress(tracker){
+      setProgress(currProgress =>{
+        const diff = (tracker/24)*100;
+        return Math.min( diff, 100);
+      })
+    }
+
     const socket = io("localhost:5001/", {
         transports: ["websocket"],
         cors: {
@@ -23,6 +35,8 @@ export default function Webcams(props){
     const videoRef = useRef()
     const photoRef = useRef()
     const canvasRef =useRef()
+
+    //used for checking how many gestures to be classified
     let tracker =0
     var camera = null;
     let i =0
@@ -33,9 +47,7 @@ export default function Webcams(props){
     function classifier(image){
       console.log('classifying'+ Handconf[i])
         if (image===Handconf[i]){
-            // console.log('true')
             tracker +=1
-            // console.log(tracker)
         }
     }
 
@@ -92,12 +104,15 @@ export default function Webcams(props){
     useEffect(() => {
     socket.on('response_back', function(image){
       classifier(image)
+      updateProgress(tracker)
 
-      if (tracker===12){
-        tracker=0
-        i=i+1
-        updateDone()
+      if (tracker===24){
+        setTimeout(() => {   
+          tracker=0
+          i=i+1
+          updateDone() }, 2000);
     }
+
   });
 
     const hands = new Hands({
@@ -137,6 +152,7 @@ export default function Webcams(props){
     return(
         <div className="video-container">
           <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+          <LinearProgress variant="determinate" value={progress} sx={{mb: '2%'}} />
 <Webcam
 hidden
           ref={videoRef}

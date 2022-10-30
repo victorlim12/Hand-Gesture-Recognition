@@ -53,14 +53,18 @@
 //         </Container>
 //     )
 // }
-import React from "react";
+import * as React from "react";
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import { useContext, AppContext } from "react";
+import Webcams from "../../Components/Webcam";
+
 const Homepage=()=>{
     const username = localStorage.getItem('username')
+
     return(
         <Container  component="main" >
             <Box maxWidth="xlg"
@@ -70,11 +74,7 @@ const Homepage=()=>{
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'column',
-                
-            
-                
             }}>
-        
                 <div className="homepage">
                     <Typography component="h1" variant="h3" >
                         Welcome  <span className='blue'>{username}</span>!

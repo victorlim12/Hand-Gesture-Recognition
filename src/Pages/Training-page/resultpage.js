@@ -29,13 +29,9 @@ export default function Tar(){
               </Typography>
 
               <TextField classname="feedback1" label="Outlined" variant="outlined" />
-            
+    
             <Button className="submit" variant="contained">Submit</Button>
-
-            
             <Copyright className="test5" sx={{ mt: 8, mb: 4 }} />
-
-
         </div>
     )
 }
