@@ -11,8 +11,10 @@ import {useRef, useEffect, useState, useContext} from 'react';
 import Webcams from '../../Components/Webcam';
 import { AppContext } from '../../Config/Provider';
 import { Handconf } from '../../Config/Training';
-
-
+import like from '../../Images/like.jpeg';
+import fist from '../../Images/fist.jpeg';
+import palm from '../../Images/palm.jpeg';
+import peace from '../../Images/peace.jpeg';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="left" {...props}>
@@ -41,8 +43,8 @@ export default function Level() {
       setCount(count+1)
     }
     
-  const gestureDesc = ['how to do this gesture. The thumbs-up emoji is used to express assent, approval, or encouragement in digital communications, especially in Western cultures.','HAHA','third gesture']
-  const gestureImg = ['https://picsum.photos/id/10/200/300','https://picsum.photos/id/1008/200/300','https://picsum.photos/id/1/200/300']
+  const gestureDesc = [' ']
+  const gestureImg = [like,peace,fist,palm]
 
 
 
@@ -67,17 +69,17 @@ export default function Level() {
             <Typography component="h2" variant="h8">
               {Handconf[done]} {done}
             </Typography>
-            <img src={gestureImg[count]} alt="" width={250} height={250}  />
+            <img src={gestureImg[count]} alt="" width={300} height={250}  />
             <Typography component="p" variant="h6" >
               {gestureDesc[count]}
             </Typography>
               <Button
                 type="submit"
-                fullWidth
+                halfWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Gesture practice: {count+1}/5
+                Gesture practice: {done+1}/5
               </Button>
           </Box>
           <Box
@@ -97,27 +99,35 @@ export default function Level() {
                 flexDirection: 'column',
                 width: '50%',
                   }}>
-              <Typography component="h1" variant="h3" mb={'5%'} > Camera view</Typography>
+              <Typography component="h3" variant="h3" mb={'5%'} > Camera view</Typography>
                   <Webcams 
                   gesture= {Handconf[done]}
                   />
-              <Button
+              {/* <Button
                 onClick={updateCount}
                 type="submit"
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
                 Next gesture 
-              </Button>
+              </Button> */}
         <Box>
                 
         </Box>
         <Button
+                onClick={done-1}
                 type="submit"
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 1, mb: 2 }}
               >
                 Restart this gesture
+              </Button>
+              <Button
+                type="submit"
+                variant="contained"
+                sx={{ mt: 0.5, mb: 2 }}
+              >
+                Generate report
               </Button>
                 
             </Box>

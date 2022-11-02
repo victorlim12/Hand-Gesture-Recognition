@@ -80,7 +80,7 @@ const About=()=>{
                 variant="contained"
                 
                 sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
-                href="/level"
+                href="/training"
               >
                 Start the game 
               </Button>
