@@ -20,7 +20,7 @@ function Copyright(props) {
     );
   }
 
-export default function Tar1(){
+export default function FinalPage(){
     return(
       
         <div>
