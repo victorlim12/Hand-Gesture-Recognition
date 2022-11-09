@@ -13,8 +13,9 @@ import './Style/color.css';
 import Ourteam from './Pages/Individual/Ourteam';
 import Category from './Pages/Individual/Level';
 import UnityGame from './Pages/Individual/Unity';
-
-
+import Reportpage from './Pages/Individual/Reportpage';
+import Feedbackend from './Pages/Individual/Feedbackend';
+import Returnpage from './Pages/Individual/returnpage';
 function App(){
 
     return (
@@ -32,6 +33,9 @@ function App(){
         <Route path="/Level" element={<Category />}/>
         <Route path="/Homepage" element={<Homepage />} />
         <Route path="/Unity" element={<UnityGame />} />
+        <Route path="/Reportpage" element={<Reportpage />} />
+        <Route path="/Feedbackend" element={<Feedbackend />} />
+        <Route path="/Returnpage" element={<Returnpage />} />
       </Routes>
       </BrowserRouter>
       </AppProvider>

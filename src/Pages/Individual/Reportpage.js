@@ -1,14 +1,29 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
+import { Button, Box} from "@mui/material";
 import { color } from "@mui/system";
 import './Tar.css'
 import Link from '@mui/material/Link';
+import { Color } from "@mui/material";
+import Slider from "@mui/material/Slider";
+import Grid from "@mui/material/Grid";
+import Rating from "@mui/material/Rating";
+import { styled } from '@mui/system';
+import { Paper } from '@mui/material';
+import ReactDOM from "react-dom";
+import '../../Style/displaypage.css';
+import {Container} from '@mui/material';
+
+
+
+
+
 
 function Copyright(props) {
     return (
+
       <Typography variant="body2" color="text.secondary" align="left" {...props}>
-        {'Copyright © '}
+        {'Copyright  '}
         <Link color="inherit" href="https://mui.com/">
           Your Website
         </Link>{' '}
@@ -18,41 +33,119 @@ function Copyright(props) {
     );
   }
 
-export default function Tar(){
+
+const Item = styled(Paper)(({ theme }) => ({
+ 
+    color: 'darkslategray',
+  backgroundColor: 'aliceblue',
+  padding: 8,
+  borderRadius: 4,
+
+
+  }));
+
+
+
+ export default function Displaypage(){
     return(
-        <div>
-  
-            <Typography variant="h4" color="text.secondary" align="center">
-            Congratulations! Your personal report has been generated.
-          </Typography>
+      
+        <div classname = "Displaypage">
 
-            
-            <p className="test">You did a good job in these gestures!</p>
+<Container component="main" maxWidth="large">
 
-            <p className="test6">Level 1</p>
 
-            <p className="test7">Level 2</p>
+<Box sx={{
+        marginTop: 3,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginLeft: 40,
+      
+      }}>
 
-            <p className="test8">Level 3</p>
 
-            <p className="test9">Level 1</p>
+<Box component="span" sx={{ width: 200,
+    height: 400, border: '1px solid grey',
+    marginTop: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        bgcolor: 'info.main'
 
-            <p className="test10">Level 2</p>
+       
+    
+    }}>
 
-            <p className="test11">Level 3</p>
+<h2>Score System</h2>
+<br></br>
+<h3>Correct Gestures:</h3>
 
-            <p className="test2">You were unsuccessful in these gestures!</p>
+<br></br>
+<br></br>
 
-            
+<h1>8</h1>
 
-            <Button className="test3" variant="contained">Give your feedback</Button>
-            <Button className="test4" variant="contained">Redo the unsuccessful gestures</Button>
 
-  
 
-            
-            <Copyright className="test5" sx={{ mt: 8, mb: 4 }} />
 
+      
+</Box>
+
+
+<Box sx={{
+        marginTop: 3,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginLeft: 25,
+      
+      }}>
+
+<Box component="span" sx={{ width: 200,
+    height: 400, border: '1px solid grey',
+    marginTop: 8,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        bgcolor: 'info.main'
+        }}>
+    
+    <h2>Time Taken</h2>
+    <br></br>
+    <h3>Current Time:</h3>
+    <br></br>
+    <br></br>
+    <h1>24s</h1>
+
+
+</Box>
+
+</Box>
+
+
+
+
+
+       
+</Box>
+</Container>
+
+<Box sx={{
+        marginTop: 5,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        
+      
+      }}>
+
+<Button variant="contained" href="/Feedbackend">Give your feedback</Button>
+<br></br>
+
+
+<Copyright  sx={{ mt: 8, mb: 4 }} />
+
+</Box>
 
         </div>
     )

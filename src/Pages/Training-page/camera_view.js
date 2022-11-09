@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useRef, useEffect, useState, useContext} from 'react';
-
+import Reportpage from '../Individual/Reportpage'
 import Webcams from '../../Components/Webcam';
 import { AppContext } from '../../Config/Provider';
 import { Handconf } from '../../Config/Training';
@@ -126,6 +126,7 @@ export default function Level() {
                 type="submit"
                 variant="contained"
                 sx={{ mt: 0.5, mb: 2 }}
+                href='/Reportpage'
               >
                 Generate report
               </Button>

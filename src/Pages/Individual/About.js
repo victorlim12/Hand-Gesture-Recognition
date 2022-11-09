@@ -62,7 +62,7 @@ const About=()=>{
         
                 <div className="homepage">
                     <Typography component="h1" variant="h8" >
-                        About this Game
+                        About this Training
                      </Typography>
                      
                 </div>
@@ -82,7 +82,7 @@ const About=()=>{
                 sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
                 href="/training"
               >
-                Start the game 
+                Start the training 
               </Button>
         
         <Button
