@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import TextField from "@mui/material/TextField";
 import { Rating, FormControlLabel, Radio } from '@mui/material';
 import RadioGroup from '@mui/material/RadioGroup';
+import Link from '@mui/material/Link';
 
 const colors = {
     orange:"#FFBA5A",
@@ -31,6 +32,21 @@ function Feedback(){
     const handleMouseLeave = () =>{
         setHoverValue(undefined)
     }
+
+    function Copyright(props) {
+        return (
+    
+          <Typography variant="body2" color="text.secondary" align="left" {...props}>
+            {'Copyright © '}
+            <Link color="inherit" href="https://mui.com/">
+              Your Website
+            </Link>{' '}
+            {new Date().getFullYear()}
+            {'.'}
+          </Typography>
+        );
+      }
+
     return(
         <Container  component="main" maxWidth="md">
             <Box
@@ -63,7 +79,7 @@ function Feedback(){
         flexDirection: 'column',
         alignItems: 'flex-start',}}>
         <Typography variant="p" color="text.secondary" align="center">
-              Would you recommand this application?
+            Were you able to complete all the gestures?
               </Typography>
               <RadioGroup name="use-radio-group" defaultValue="first">
             <FormControlLabel value="first" label="Yes" control={<Radio />} />
@@ -77,10 +93,23 @@ function Feedback(){
           size = "small"
         />
 
+
 <br></br>
 
+<Typography variant="p" color="text.secondary" align="center">
+              Is there any improvement in your hand condition?
+              </Typography>
+              <RadioGroup name="use-radio-group" defaultValue="first">
+            <FormControlLabel value="first" label="Yes" control={<Radio />} />
+              <FormControlLabel value="second" label="No" control={<Radio />} />
+            </RadioGroup>
+            
+
+
+<br></br>      
+
             <Typography variant="p" color="text.secondary" align="center">
-              Please help us understand what can be improved in our product
+              Please help us understand what can be improved on
               </Typography>   
 
               <RadioGroup name="use-radio-group" defaultValue="first">
@@ -102,41 +131,20 @@ function Feedback(){
 
             <br></br>
 
+            
+
             <Typography component="h2" variant="h8" >
                     How was your overall experience?
                     </Typography>
-
+                    <Rating name="size-large" defaultValue={2} size="large" />
               <br></br>
 
-            <div style={style.stars}>
-                {stars.map((_, index) =>{
-                    return(
-                            <FaStar
-                            key={index}
-                            size={24}
-                            style={{
-                                marginRight: 10,
-                                cursor:"pointer"
-                            }}
-                            color={(hoverValue || currentValue) > index ? colors.orange : colors.grey}
-                            onClick={() => handleClick(index + 1)}
-                            onMouseOver={() => handleMouseOver(index + 1)}
-                            onMouseLeave={handleMouseLeave}
-                            />
-                        )   
-                    })}
-                </div>
-
-               
-
-                <textarea
-                    placeholder="Any other feedback?"
-                    style={styles.textarea}
-                />
-                <Button variant="contained" Submit sx={{display:'flex'}}>
+                <Button variant="contained" href="Returnpage/" Submit sx={{display:'flex'}}>
                     Submit
                 </Button>
-            
+
+                <br></br>
+                <Copyright  sx={{ mt: 8, mb: 4 }} />           
             </Box>
         </Container>
     );

@@ -9,6 +9,7 @@ import Login from './Pages/Login/Loginpage';
 import FinalPage from './extrapage';
 import Resultpage from './resultpage';
 import Displaypage from './displaypage';
+import Returnpage from './Returnpage';
 
 
 
@@ -27,6 +28,7 @@ function App(){
         <Route path="/FinalPage" element={<FinalPage/>}/>
         <Route path="/resultpage" element={<Resultpage/>}/>
         <Route path="/displaypage" element={<Displaypage/>}/>
+        <Route path="/Returnpage" element={<Returnpage/>}/>
         
         
       </Routes>

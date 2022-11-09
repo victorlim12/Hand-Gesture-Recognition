@@ -57,7 +57,7 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: 10,
+        marginLeft: 32,
       }}>
 
 
@@ -71,7 +71,7 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginLeft: 10,
+        marginLeft: 45,
       
       }}>
 
@@ -82,7 +82,7 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        bgcolor: 'primary.main'
+        bgcolor: 'info.main'
 
        
     
@@ -91,9 +91,12 @@ const Item = styled(Paper)(({ theme }) => ({
 <h2>Score System</h2>
 <br></br>
 <h3>Correct Gestures:</h3>
+
 <br></br>
 <br></br>
-<h3>Personal Best:</h3>
+
+<h1>8</h1>
+
 
 
 
@@ -109,7 +112,7 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        marginLeft: 19,
+        marginLeft: 25,
       
       }}>
 
@@ -119,7 +122,7 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        bgcolor: 'warning.main'
+        bgcolor: 'info.main'
         }}>
     
     <h2>Time Taken</h2>
@@ -127,48 +130,14 @@ const Item = styled(Paper)(({ theme }) => ({
     <h3>Current Time:</h3>
     <br></br>
     <br></br>
-    <h3>Personal Best:</h3>
+    <h1>24s</h1>
 
 
 </Box>
 
 </Box>
 
-<Box sx={{
-        marginTop: 3,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginLeft: 20,
-      
-      }}>
 
-<Box component="span" sx={{ 
-    width: 200,
-    height: 400, 
-    border: '1px solid grey',
-    marginTop: 8,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        bgcolor: 'success.main'
-    
-    
-    
-    }}>
- 
- <h3>Attention:</h3>
- <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
- <br></br>
- <h3>Working Memory:</h3>
- <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
- <br></br>
- <h3>Inhibilitory Control:</h3>
- <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
-  
-</Box>
-
-</Box>
 
 
 
@@ -185,9 +154,9 @@ const Item = styled(Paper)(({ theme }) => ({
       
       }}>
 
-<Button variant="contained">Give your feedback</Button>
+<Button variant="contained" href="/Feedback">Give your feedback</Button>
 <br></br>
-<Button variant="contained">Redo the unsuccessful gestures</Button>
+
 
 <Copyright  sx={{ mt: 8, mb: 4 }} />
 
