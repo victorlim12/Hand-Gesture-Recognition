@@ -6,14 +6,12 @@ import './Tar.css'
 import Link from '@mui/material/Link';
 import Container from '@mui/material/Container';
 import { style } from "@mui/system";
-import { Component } from "react";
-
 
 function Copyright(props) {
     return (
 
       <Typography variant="body2" color="text.secondary" align="left" {...props}>
-        {'Copyright  '}
+        {'Copyright © '}
         <Link color="inherit" href="https://mui.com/">
           Your Website
         </Link>{' '}
@@ -42,22 +40,16 @@ function Copyright(props) {
 
                     <br></br>
 
-               
-
-
-
-
                     <Box
                 sx={{
                     width:"100%",
-                    marginTop:20,
+                    marginTop: 20,
                     display: "flex",
                     alignItems: "center",
                     flexDirection: "column",
                     
                 }}>
-                    <Button variant="contained" size="large" href="/homepage">
-                        Return to homepage</Button>
+                    <Button variant="contained" size="large" href="homepage/">Return to homepage</Button>
                     <br></br>
                 </Box>
 
