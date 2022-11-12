@@ -17,7 +17,12 @@ import fist from '../../Images/fist.jpeg';
 import palm from '../../Images/palm.jpeg';
 import peace from '../../Images/peace.jpeg';
 import one from '../../Images/one.jpeg';
-
+import three from '../../Images/three.jpeg';
+import four from '../../Images/four.jpeg';
+import five from '../../Images/five.jpeg';
+import six from '../../Images/six.jpeg';
+import peaceinverted from '../../Images/peaceinverted.jpeg';
+import dislike from '../../Images/dislike.jpeg';
 
 function Copyright(props) {
   return (
@@ -55,7 +60,7 @@ export default function Level() {
  
     
   const gestureDesc = [' ']
-  const gestureImg = [like,peace,one,palm,fist]
+  const gestureImg = [like,peace,one,three,four,five,six,fist,peaceinverted, dislike]
 
 
 
