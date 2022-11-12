@@ -52,7 +52,10 @@ const Item = styled(Paper)(({ theme }) => ({
       
         <div classname = "Displaypage">
 
-<Container component="main" maxWidth="large">
+<Container component="main" maxWidth="large"
+  sx={{display:'flex',
+  alignItems:'center'
+  }}>
 
 
 <Box sx={{
