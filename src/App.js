@@ -15,7 +15,7 @@ import Category from './Pages/Individual/Level';
 import UnityGame from './Pages/Individual/Unity';
 import Reportpage from './Pages/Individual/Reportpage';
 import Feedbackend from './Pages/Individual/Feedbackend';
-import Returnpage from './Pages/Individual/Returnpage';
+import Returnpage from './Pages/Individual/returnpage';
 function App(){
 
     return (

@@ -45,9 +45,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import Intro from '../../Images/intro.mp4';
 
 const About=()=>{
+    // playVideo() {
+    //     this.refs.vidRef.play();
+    //   }
     return(
         <Container  component="main" maxWidth="md">
             <Box
@@ -67,9 +70,22 @@ const About=()=>{
                      
                 </div>
             </Box>
+            <Box 
+            sx={{
+                    width:"100%",
+                    marginTop: 4,
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+            }}>
+            <video controls height = "441px" width = "775px" >
+
+             <source src={Intro} type="video/mp4"></source>
+            </video>
+            </Box>
             <Box sx={{
                 width:"100%",
-                marginTop: 38,
+                marginTop: 3,
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
@@ -89,7 +105,7 @@ const About=()=>{
                 type="submit"
                 halfWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
+                sx={{ mt: 1, mb: 2, borderRadius: '25px'}}
                 href="/Ourteam"
               >
                 Know more about our team
