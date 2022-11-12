@@ -107,11 +107,11 @@ const Homepage=()=>{
                 
             }}>
                 
-              <Button variant="contained" sx={{display:'flex', minWidth:'6rem', minHeight:'2rem', mt: 3, mb: 2 , borderRadius: '25px'}}
+              <Button variant="contained" sx={{display:'flex', minWidth:'7rem', minHeight:'2rem', mt: 3, mb: 2 , borderRadius: '25px'}}
                 href="/login">
                   log in
                </Button>
-               <Button variant="contained" sx={{mt: 2, mb: 2,  borderRadius: '25px'}}
+               <Button variant="contained" sx={{display:'flex', minWidth:'7rem', minHeight:'2rem', mt: 2, mb: 2,  borderRadius: '25px'}}
                 href="/about">
                   start
                </Button>

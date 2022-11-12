@@ -77,7 +77,7 @@ function Feedback(){
                     placeholder="What's your feedback?"
                     style={styles.textarea}
                 />
-                <Button variant="contained" Submit sx={{display:'flex'}}>
+                <Button variant="contained" Submit sx={{display:'flex', minWidth:'7rem', minHeight:'2rem',mt:3, borderRadius: '25px'}}>
                     Submit
                 </Button>
             

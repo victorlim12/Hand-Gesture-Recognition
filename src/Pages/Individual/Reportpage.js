@@ -13,7 +13,7 @@ import { Paper } from '@mui/material';
 import ReactDOM from "react-dom";
 import '../../Style/displaypage.css';
 import {Container} from '@mui/material';
-
+import Feedbackend from './Feedbackend';
 
 
 
@@ -47,6 +47,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
  export default function Displaypage(){
+    const totaltime = localStorage.getItem('totaltime')
     return(
       
         <div classname = "Displaypage">
@@ -59,63 +60,79 @@ const Item = styled(Paper)(({ theme }) => ({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: 40,
-      
+        marginLeft: 28,
+     
       }}>
 
 
-<Box component="span" sx={{ width: 200,
-    height: 400, border: '1px solid grey',
+<Box component="main" sx={{ width: 280,
+    height: 350, 
     marginTop: 8,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        bgcolor: 'info.main'
-
-       
-    
+        backgroundColor:'rgb(219, 226, 239)',
+        borderRadius: '25px'
     }}>
 
-<h2>Score System</h2>
-<br></br>
-<h3>Correct Gestures:</h3>
+<Typography component="h5" variant="h5" sx={{mt:10}}>
+  {/* Score System */}
+  </Typography>
 
-<br></br>
-<br></br>
-
-<h1>8</h1>
-
-
-
-
-      
+<Typography component="h5" variant="h5">
+  <b>Total</b>
+  </Typography>
+  <br></br>
+  <Typography component="h5" variant="h5">
+  <b>Gestures Completed :</b>
+  </Typography>
+  <br></br>
+  <br></br>
+  <Typography component="h5" variant="h4" >
+    3
+    </Typography>
 </Box>
 
 
 <Box sx={{
         marginTop: 3,
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         alignItems: 'center',
         marginLeft: 25,
       
       }}>
 
-<Box component="span" sx={{ width: 200,
-    height: 400, border: '1px solid grey',
-    marginTop: 8,
+<Box component="main" sx={{ width: 280,
+    height: 350, 
+    marginTop: 5,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        bgcolor: 'info.main'
+        backgroundColor:'rgb(219, 226, 239)',
+        borderRadius: '25px'
         }}>
     
-    <h2>Time Taken</h2>
+    <Typography component="h10" variant="h4" sx={{mt:3}}>
+      {/* Time Taken */}
+      </Typography>
     <br></br>
-    <h3>Current Time:</h3>
     <br></br>
-    <br></br>
-    <h1>24s</h1>
+    <Typography component="h5" variant="h5" >
+      <b>Total time taken :</b>
+      </Typography>
+      <br></br>
+     <Typography component="h5" variant="h5" >
+       {totaltime} seconds
+     </Typography>
+     <br></br>
+    <Typography component="h5" variant="h5" >
+      <b>Average time taken :</b>
+      </Typography>
+      <br></br>
+    <Typography component="h5" variant="h5" >
+       {parseInt(totaltime/3)} seconds
+     </Typography>
 
 
 </Box>
@@ -139,7 +156,8 @@ const Item = styled(Paper)(({ theme }) => ({
       
       }}>
 
-<Button variant="contained" href="/Feedbackend">Give your feedback</Button>
+<Button variant="contained" href="/Feedbackend" sx={{borderRadius: '25px'}}>
+  Give your feedback</Button>
 <br></br>
 
 

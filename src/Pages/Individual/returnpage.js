@@ -49,7 +49,7 @@ function Copyright(props) {
                     flexDirection: "column",
                     
                 }}>
-                    <Button variant="contained" size="large" href="homepage/">Return to homepage</Button>
+                    <Button variant="contained" size="large" href="/homepage" sx={{borderRadius: '25px'}}>Return to homepage</Button>
                     <br></br>
                 </Box>
 

@@ -7,18 +7,22 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {useRef, useEffect, useState, useContext} from 'react';
-import Reportpage from '../Individual/Reportpage'
+
 import Webcams from '../../Components/Webcam';
+import Timer from '../../Components/timer';
 import { AppContext } from '../../Config/Provider';
 import { Handconf } from '../../Config/Training';
 import like from '../../Images/like.jpeg';
 import fist from '../../Images/fist.jpeg';
 import palm from '../../Images/palm.jpeg';
 import peace from '../../Images/peace.jpeg';
+import one from '../../Images/one.jpeg';
+
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="left" {...props}>
-      {'Copyright © '}
+      {'Copyright  '}
       <Link color="inherit" href="https://mui.com/">
         Your Website
       </Link>{' '}
@@ -28,23 +32,30 @@ function Copyright(props) {
   );
 }
 
+
+
+
 const theme = createTheme();
 
+
+
 export default function Level() {
+  
   let [done, setDone] = useContext(AppContext)
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log('event',event)
+  //   const data = new FormData(event.currentTarget);
+  //   console.log('data',data)
+  //   localStorage.setItem('Average time', data.get());
+  //   // window.location.href =  '/report'
+  // };
   
-  const [count,setCount] = useState(0)
-    function updateCount(){
-      setCount(count+1)
-    }
+ 
     
   const gestureDesc = [' ']
-  const gestureImg = [like,peace,fist,palm]
+  const gestureImg = [like,peace,one,palm,fist]
 
 
 
@@ -67,20 +78,21 @@ export default function Level() {
               Gesture information
             </Typography>
             <Typography component="h2" variant="h8">
-              {Handconf[done]} {done}
+              {Handconf[done]} 
             </Typography>
-            <img src={gestureImg[count]} alt="" width={300} height={250}  />
+            < img src={gestureImg[done]} alt="" width={300} height={250}  />
             <Typography component="p" variant="h6" >
-              {gestureDesc[count]}
+              {gestureDesc[done]}
             </Typography>
               <Button
                 type="submit"
                 halfWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
               >
                 Gesture practice: {done+1}/5
               </Button>
+              
           </Box>
           <Box
               sx={{
@@ -103,6 +115,7 @@ export default function Level() {
                   <Webcams 
                   gesture= {Handconf[done]}
                   />
+              
               {/* <Button
                 onClick={updateCount}
                 type="submit"
@@ -112,24 +125,17 @@ export default function Level() {
                 Next gesture 
               </Button> */}
         <Box>
-                
+        <Timer startCount="0"/>   
         </Box>
-        <Button
-                onClick={done-1}
-                type="submit"
-                variant="contained"
-                sx={{ mt: 1, mb: 2 }}
-              >
-                Restart this gesture
-              </Button>
-              <Button
+        
+              {/* <Button
+                // onClick={handleSubmit}
                 type="submit"
                 variant="contained"
                 sx={{ mt: 0.5, mb: 2 }}
-                href='/Reportpage'
               >
                 Generate report
-              </Button>
+              </Button> */}
                 
             </Box>
           </Box>

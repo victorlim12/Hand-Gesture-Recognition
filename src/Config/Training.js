@@ -1,1 +1,1 @@
-export const Handconf=["like", "peace", "fist", "palm","peace inverted", "mute"]
+export const Handconf=["like", "peace", "one", "palm","peace inverted", "mute"]

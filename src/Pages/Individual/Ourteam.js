@@ -210,7 +210,7 @@ export default function Ourteam() {
                     type="submit"
                     halfWidth
                     variant="contained"
-                    sx={{ mt: 3, mb: 2 }}
+                    sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
                     href='/Training'
                 >
                     Start the Training 

@@ -52,7 +52,7 @@ function Feedback(){
             <Box
                 sx={{
                     width:"100%",
-                    marginTop: 7,
+                    marginTop: 4,
                     display: "flex",
                     alignItems: "center",
                     flexDirection: "column",
@@ -74,7 +74,7 @@ function Feedback(){
                     
                 }}>
                     <Box sx={{
-        marginTop: 3,
+        marginTop: 2,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',}}>
@@ -147,7 +147,7 @@ function Feedback(){
                     <Rating name="size-large" defaultValue={2} size="large" />
               <br></br>
               </Box>
-                <Button variant="contained" href="Returnpage/" Submit sx={{display:'flex'}}>
+                <Button variant="contained" href="Returnpage/" Submit sx={{display:'flex', minWidth:'7rem', minHeight:'2rem', borderRadius: '25px'}}>
                     Submit
                 </Button>
 
