@@ -19,8 +19,7 @@ import peace from '../../Images/peace.jpeg';
 import one from '../../Images/one.jpeg';
 import three from '../../Images/three.jpeg';
 import four from '../../Images/four.jpeg';
-import five from '../../Images/five.jpeg';
-import six from '../../Images/six.jpeg';
+import call from '../../Images/call.jpeg';
 import peaceinverted from '../../Images/peaceinverted.jpeg';
 import dislike from '../../Images/dislike.jpeg';
 
@@ -60,7 +59,7 @@ export default function Level() {
  
     
   const gestureDesc = [' ']
-  const gestureImg = [like,peace,one,three,four,five,six,fist,peaceinverted, dislike]
+  const gestureImg = [like,peace,one,three,four,palm,call,fist,peaceinverted, dislike]
 
 
 
@@ -95,7 +94,7 @@ export default function Level() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, borderRadius: '25px'}}
               >
-                Gesture practice: {done+1}/5
+                Gesture practice: {done+1}/10
               </Button>
               
           </Box>
