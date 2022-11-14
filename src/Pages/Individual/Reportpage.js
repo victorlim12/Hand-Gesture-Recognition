@@ -49,6 +49,7 @@ const Item = styled(Paper)(({ theme }) => ({
  export default function Displaypage(){
     const totaltime = localStorage.getItem('totaltime')
     const totalgesture = localStorage.getItem('totalgesture')
+    const username = localStorage.getItem('username')
     return(
       
         <div classname = "Displaypage">
@@ -159,7 +160,11 @@ const Item = styled(Paper)(({ theme }) => ({
         
       
       }}>
-
+<Typography component="h5" variant="h4" >
+<span className='blue'>{username}</span>
+    </Typography>
+    <br></br>
+    <br></br>  
 <Button variant="contained" href="/Feedbackend" sx={{borderRadius: '25px'}}>
   Give your feedback</Button>
 <br></br>
