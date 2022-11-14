@@ -10,6 +10,13 @@ import {Button} from '@mui/material';
 import {Container} from '@mui/material';
 import {Box} from '@mui/material';
 import fist from '../../Images/fist.jpeg';
+import xinyao from '../../Images/xinyao.jpeg';
+import tantian from '../../Images/tantian.jpeg';
+import yixin from '../../Images/yixin.jpeg';
+import wenhao from '../../Images/wenhao.jpeg';
+import jessie from '../../Images/jessie.jpeg';
+import victor from '../../Images/victor.jpeg';
+import daoxian from '../../Images/daoxian.jpeg';
 // const useStyles = makeStyles({
 //   root: {
 //      maxWidth: 345,
@@ -31,7 +38,7 @@ export default function Ourteam() {
             sx={{
                 width:'100%',
                 marginTop: 5,
-                marginLeft:3,
+                marginLeft:1,
                 display: 'flex',
                 alignItems: 'center',
                 flexDirection: 'row',
@@ -40,13 +47,13 @@ export default function Ourteam() {
                 <Box>
                     <Card sx={{
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"                       
                         height="140"
-                        image= {fist}
+                        image= {victor}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -54,6 +61,10 @@ export default function Ourteam() {
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                             Group Leader! Backend Team
+                            <br></br>
+                            <Typography gutterBottom variant="h9" component="h6">
+                            vict0024@e.ntu.edu.sg
+                         </Typography>
                         </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -61,15 +72,15 @@ export default function Ourteam() {
                 </Box>
              <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         height="140"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJLyl0h-R6272OWGz6CbxhW9cg5CmktrY_BA&usqp=CAU"
+                        image={daoxian}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -77,6 +88,10 @@ export default function Ourteam() {
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
                         Backend Team
+                        <br></br>
+                        <Typography gutterBottom variant="h9" component="h6">
+                            ding0137@e.ntu.edu.sg
+                         </Typography>
                         </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -84,15 +99,15 @@ export default function Ourteam() {
                 </Box>
             <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         height="140"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXP2cXwXvA7NF8oZ06AMYtvP2Gn-Qc9HwEQ&usqp=CAU"
+                        image={tantian}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -101,21 +116,24 @@ export default function Ourteam() {
                         <Typography variant="body2" color="textSecondary" component="p">
                         Backend Team
                         </Typography>
+                        <Typography gutterBottom variant="h9" component="h6">
+                        e190194@e.ntu.edu.sg
+                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>
                 </Box>
             <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         height="140"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYX38f91o7sowo_9V7LJF5GWUawBIcrB8aNg&usqp=CAU"
+                        image={jessie}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -124,21 +142,24 @@ export default function Ourteam() {
                         <Typography variant="body2" color="textSecondary" component="p">
                         Backend Team
                         </Typography>
+                        <Typography gutterBottom variant="h9" component="h6">
+                        ngwe0101@e.ntu.edu.sg
+                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>
                 </Box>
              <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         height="140"
-                        image=""
+                        image={wenhao}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -147,21 +168,24 @@ export default function Ourteam() {
                         <Typography variant="body2" color="textSecondary" component="p">
                         Frontend Team
                         </Typography>
+                        <Typography gutterBottom variant="h9" component="h6">
+                        e200163@e.ntu.edu.sg
+                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>
                 </Box>
              <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
                         height="140"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ocaEs6IIXNodnkbqT6sKmARWinCkeL704w&usqp=CAU"
+                        image={xinyao}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -170,22 +194,25 @@ export default function Ourteam() {
                         <Typography variant="body2" color="textSecondary" component="p">
                         Group Teasure Frontend Team
                         </Typography>
+                        <Typography gutterBottom variant="h9" component="h6">
+                            liux0111@e.ntu.edu.sg
+                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>
                 </Box>
              <Box>
                     <Card sx={{
-                        marginLeft: 3,
+                        marginLeft: 2,
                         minWidth:150,
-                        maxWidth: 150,
-                        height:250}} >
+                        maxWidth: 160,
+                        height:260}} >
                     <CardActionArea>
                         <CardMedia
                         component="img"
 
                         height="140"
-                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGQu4Jwknm8NWmlCj3MPw6bLdsXvAsIFx9kA&usqp=CAU"
+                        image={yixin}
                         />
                         <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
@@ -194,6 +221,9 @@ export default function Ourteam() {
                         <Typography variant="body2" color="textSecondary" component="p">
                         Frontend Team
                         </Typography>
+                        <Typography gutterBottom variant="h9" component="h6">
+                            feng0126@e.ntu.edu.sg
+                         </Typography>
                         </CardContent>
                     </CardActionArea>
                     </Card>

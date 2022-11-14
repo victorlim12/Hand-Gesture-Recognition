@@ -48,6 +48,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
  export default function Displaypage(){
     const totaltime = localStorage.getItem('totaltime')
+    const totalgesture = localStorage.getItem('totalgesture')
     return(
       
         <div classname = "Displaypage">
@@ -92,7 +93,7 @@ const Item = styled(Paper)(({ theme }) => ({
   <br></br>
   <br></br>
   <Typography component="h5" variant="h4" >
-    3
+    {totalgesture}
     </Typography>
 </Box>
 

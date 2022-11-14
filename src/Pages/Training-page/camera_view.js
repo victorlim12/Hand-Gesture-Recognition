@@ -60,7 +60,7 @@ export default function Level() {
     
   const gestureDesc = [' ']
   const gestureImg = [like,peace,one,three,four,palm,call,fist,peaceinverted, dislike]
-
+  localStorage.setItem('totalgesture', done+1)
 
 
   return (
