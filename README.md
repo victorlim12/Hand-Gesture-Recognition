@@ -5,4 +5,5 @@ Our DIP Project is titled "Robust Hand Gesture Recognition using Neural ODE Netw
 As of current:
 - Model_Comparison: To compare models with ODE layers against those without
    - It is **RECOMMENDED** to test the files in this directory before moving onto below (dependencies + requirement downloads are located here)
-- Frontend + Backend: Web application used for our project
+- Frontend + Backend: Proof-Of-Concept (POC) Web application used for our project
+- More to be added......
