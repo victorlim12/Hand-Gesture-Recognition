@@ -1,0 +1,1 @@
+export const Handconf=["like", "peace", "one", "three","four","five","six","palm","peaceinverted", "dislike"]
