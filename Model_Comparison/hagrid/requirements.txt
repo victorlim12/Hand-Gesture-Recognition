@@ -47,7 +47,7 @@ sphinx-rtd-theme==0.2.4
 tensorboard==2.8.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.1
-torch==1.11.0
+torch==1.13.1
 torchdiffeq==0.2.3
 torchmetrics==0.8.0
 torchvision==0.12.0
