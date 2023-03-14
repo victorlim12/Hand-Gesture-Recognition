@@ -74,5 +74,6 @@ python -m classifier.run --command 'test' --path_to_config $BASE_HAGRID_DIRECTOR
 | MobileNetV3_small.pth | 88.9% | 66.3% | 43.2% |
 | MobileNetV3_large.pth  | 91.6% | 73% | 50.6% |
 | MobileV3_small_ODE.pth | 93.3% | 75.6% | 52.5% |
-| MobileV3_large_ODE.pth | 94.5% | 78.0% | 55.6% |
 | ResNet18.pth | 95.4% | 72.9% | 49.4% |
+
+==> Missing MobileV3_large_ODE
